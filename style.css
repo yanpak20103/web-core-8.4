@@ -1,0 +1,198 @@
+@font-face {
+    font-family: 'TTLakes';
+    src: url('TTLakes.woff') format('woff');
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    background-color: #fff;
+}
+
+.box {
+    max-width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    background-color: rgb(252, 250, 250);
+}
+
+.header {
+    margin-bottom: 16px;
+}
+
+.headline {
+    font-family: 'TTLakes' , sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #7E7E82;
+}
+
+.brand-swiper {
+    width: 100%;
+    padding-bottom: 35px !important;
+    position: relative;
+}
+
+.brand-lenovo,
+.brand-samsung,
+.brand-apple,
+.brand-viewsonic,
+.brand-bosch,
+.brand-hp,
+.brand-acer,
+.brand-sony {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 72px;
+    background: #ffffff;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.brand-logo {
+    max-height: 30px;
+    max-width: 100px;
+    object-fit: contain;
+}
+
+.brand-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.brand-swiper .swiper-slide {
+    width: 240px !important;
+}
+
+.brand-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.brand-swiper .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: #DDDDDD;
+    opacity: 1;
+}
+
+.brand-swiper .swiper-pagination-bullet-active {
+    background: #B5B5B5;
+}
+
+.show-more-btn {
+    display: none;
+}
+
+.brand-swiper .extra-pc-slide {
+    display: none !important;
+}
+
+@media (min-width: 768px) {
+    .swiper-pagination {
+        display: none !important;
+    }
+
+    .brand-swiper .swiper-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        transform: none !important;
+    }
+
+    .brand-swiper .swiper-slide {
+        width: 100% !important;
+    }
+
+    .show-more-btn {
+        display: flex;
+        align-items: center;
+        background: none;
+        border: none;
+        color: #1B1C21;
+        font-family: 'TTLakes', sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        gap: 8px;
+        padding: 0;
+        margin-top: -10px;
+    }
+
+    .brand-swiper .swiper-slide:has(.brand-viewsonic),
+    .brand-swiper .swiper-slide:has(.brand-sony) {
+        order: 1;
+        display: none !important;
+    }
+
+    .brand-swiper.is-opened .swiper-slide:has(.brand-viewsonic),
+    .brand-swiper.is-opened .swiper-slide:has(.brand-sony) {
+        display: block !important;
+    }
+
+    .brand-swiper .extra-pc-slide {
+    display: none !important;
+    }
+}
+
+@media (min-width: 1120px) {
+   .swiper-pagination {
+        display: none !important;
+    }
+
+    .brand-swiper .swiper-wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        transform: none !important; 
+    }
+
+    .brand-swiper .swiper-slide {
+        width: 100% !important;
+        order: unset !important; 
+    }
+
+    .brand-swiper .swiper-slide:not(.extra-pc-slide) {
+        display: block !important;
+    }
+
+    .brand-swiper .extra-pc-slide {
+        display: none !important;
+    }
+
+    .brand-swiper.is-opened .extra-pc-slide {
+        display: block !important;
+    }
+
+    .show-more-btn {
+        display: flex;
+        align-items: center;
+        background: none;
+        border: none;
+        color: #1B1C21;
+        font-family: 'TTLakes', sans-serif;
+        font-size: 15px;
+        font-weight: bold;
+        cursor: pointer;
+        gap: 8px;
+        padding: 0;
+        margin-top: 24px;
+    }
+}
