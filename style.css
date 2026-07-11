@@ -101,7 +101,7 @@ body {
     display: none;
 }
 
-.brand-swiper .extra-pc-slide {
+.brand-swiper .swiper-wrapper > .extra-pc-slide {
     display: none !important;
 }
 

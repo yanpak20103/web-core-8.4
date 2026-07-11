@@ -11,6 +11,7 @@ brandButtons.forEach(button => {
 
 function handleTabletAndDesktop() {
     if (mobileQuery.matches) {
+        document.querySelectorAll('.extra-pc-slide').forEach(slide => slide.remove());
         if (!swiperInstance) {
             swiperInstance = new Swiper('.brand-swiper', {
                 slidesPerView: 1.25,
